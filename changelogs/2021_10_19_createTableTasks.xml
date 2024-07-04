@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+<changeSet id="createTableTask" author="Rocha">
+        <createTable tableName="task">
+            <column name="id" type="serial">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            
+            <column name="description" type="text">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="saludar" type="text">
+                <constraints nullable="false"/>
+            </column>
+
+             <column name="fecha_de_vencimiento" type="Date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="timestamp without time zone">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp without time zone">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>        
+    </changeSet>
+
+
+
+<changeSet author="rocha" id="addColumnProjectIdToTableTask">
+    <addColumn
+            schemaName="public"
+            tableName="task">
+        <column name="project_id" type="int"/>
+    </addColumn>
+           
+             <rollback>
+              <rollback>
+            <dropColumn tableName="task" columnName="project_id"/>
+        </rollback>
+        </rollback>
+</changeSet>
+
+ <changeSet author="rocha" id="addForeignKeyConstraint-idProjectToTask">
+    <addForeignKeyConstraint baseColumnNames="project_id"
+            baseTableName="task"
+            constraintName="fk_project_id"
+            deferrable="true"
+            initiallyDeferred="true"
+            onDelete="CASCADE"
+            onUpdate="RESTRICT"
+            referencedColumnNames="id"
+            referencedTableName="project"/>
+           
+            <rollback>
+             <dropForeignKeyConstraint baseTableName="task" constraintName="fk_project_id"/>
+            </rollback>
+</changeSet>
+   
+    
+
+</databaseChangeLog>

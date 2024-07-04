@@ -1,0 +1,33 @@
+databaseChangeLog:
+-  changeSet:
+      id: create-table-cliente2
+      author: diego
+      changes:
+        - createTable:
+            tableName: cliente2
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: nombre
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: apellido
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+      rollback:
+        - dropTable:
+            tableName: cliente2

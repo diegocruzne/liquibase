@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+<changeSet id="createTableLocation" author="Rocha">
+        <createTable tableName="location">
+            <column name="id" type="serial">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            
+            <column name="place" type="text">
+                <constraints nullable="false"/>
+            </column>
+
+ 
+            <column name="created_at" type="timestamp without time zone">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp without time zone">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>        
+    </changeSet>
+
+    <changeSet id="createTableResponsible" author="Rocha">
+        <createTable tableName="responsible">
+            <column name="id" type="serial">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            
+            <column name="name" type="text">
+                <constraints nullable="false"/>
+            </column>
+
+ 
+            <column name="created_at" type="timestamp without time zone">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp without time zone">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>        
+    </changeSet>
+
+
+
+<changeSet author="rocha" id="addColumnLocationIdToTableResponsible">
+    <addColumn
+            schemaName="public"
+            tableName="responsible">
+        <column name="location_id" type="int"/>
+    </addColumn>
+           
+             <rollback>
+              <rollback>
+            <dropColumn tableName="responsible" columnName="location_id"/>
+        </rollback>
+        </rollback>
+</changeSet>
+
+ <changeSet author="rocha" id="addForeignKeyConstraint-idLocationToResponsible">
+    <addForeignKeyConstraint baseColumnNames="location_id"
+            baseTableName="responsible"
+            constraintName="fk_location_id"
+            deferrable="true"
+            initiallyDeferred="true"
+            onDelete="CASCADE"
+            onUpdate="RESTRICT"
+            referencedColumnNames="id"
+            referencedTableName="location"/>
+           
+            <rollback>
+             <dropForeignKeyConstraint baseTableName="responsible" constraintName="fk_location_id"/>
+            </rollback>
+</changeSet>
+   
+    
+
+</databaseChangeLog>

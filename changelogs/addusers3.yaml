@@ -1,0 +1,13 @@
+databaseChangeLog:
+-  changeSet:
+      id:  insert-values-3
+      author:  diego
+      changes:
+        -  sql:
+            dbms: 'oracle'
+            endDelimiter: \nGO
+            splitStatements:  true
+            sql:  INSERT INTO cliente (id, nombre, apellido, email)
+              VALUES (3, 'Raquel', 'Perez', 'raquel@gmail.com')
+            stripComments:  true
+    

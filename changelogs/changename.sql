@@ -1,0 +1,1 @@
+RENAME test2 TO cliente

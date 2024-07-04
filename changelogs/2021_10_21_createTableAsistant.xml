@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+<changeSet id="createTableAsistant" author="Rocha">
+        <createTable tableName="assistant">
+            <column name="id" type="serial">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            
+            <column name="nombre" type="text">
+                <constraints nullable="false"/>
+            </column>
+
+ 
+            <column name="created_at" type="timestamp without time zone">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp without time zone">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>        
+    </changeSet>
+
+    <changeSet id="createTableResponsibleAssistantDetail" author="Rocha">
+        <createTable tableName="responsible_assiatant_detail">
+            <column name="id" type="serial">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            
+            <column name="responsible_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="assistant_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="created_at" type="timestamp without time zone">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp without time zone">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>        
+    </changeSet>
+
+
+
+ <changeSet author="rocha" id="addForeignKeyConstraint-idResponsibleToDetailRes_Asist">
+    <addForeignKeyConstraint baseColumnNames="responsible_id"
+            baseTableName="responsible_assiatant_detail"
+            constraintName="fk_responsible_id"
+            deferrable="true"
+            initiallyDeferred="true"
+            onDelete="CASCADE"
+            onUpdate="RESTRICT"
+            referencedColumnNames="id"
+            referencedTableName="responsible"/>
+           
+            <rollback>
+             <dropForeignKeyConstraint baseTableName="responsible_assiatant_detail" constraintName="fk_responsible_id"/>
+            </rollback>
+</changeSet>
+   
+
+    
+    <changeSet author="rocha" id="addForeignKeyConstraint-idAsistantToDetailRes_Asist">
+    <addForeignKeyConstraint baseColumnNames="assistant_id"
+            baseTableName="responsible_assiatant_detail"
+            constraintName="fk_assistant_id"
+            deferrable="true"
+            initiallyDeferred="true"
+            onDelete="CASCADE"
+            onUpdate="RESTRICT"
+            referencedColumnNames="id"
+            referencedTableName="assistant"/>
+           
+            <rollback>
+             <dropForeignKeyConstraint baseTableName="responsible_assiatant_detail" constraintName="fk_assistant_id"/>
+            </rollback>
+</changeSet>
+
+<changeSet author="rocha" id="addForeignKeyConstraint-projectIdToProject">
+    <addForeignKeyConstraint baseColumnNames="responsible_assiatant_detail_id"
+            baseTableName="project"
+            constraintName="fk_responsible_assistant_detail_id"
+            deferrable="true"
+            initiallyDeferred="true"
+            onDelete="CASCADE"
+            onUpdate="RESTRICT"
+            referencedColumnNames="id"
+            referencedTableName="responsible_assiatant_detail"/>
+           
+            <rollback>
+             <dropForeignKeyConstraint baseTableName="project" constraintName="fk_responsible_assistant_detail_id"/>
+            </rollback>
+</changeSet>
+
+</databaseChangeLog>

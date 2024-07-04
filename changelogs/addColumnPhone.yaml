@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-column-phone
+      author: diego
+      changes:
+        - addColumn:
+            tableName: cliente2
+            columns:
+              - column:
+                  name: telefono
+                  type: varchar(20)
+      rollback:
+        - dropColumn:
+            columnName: telefono
+            tableName: cliente2

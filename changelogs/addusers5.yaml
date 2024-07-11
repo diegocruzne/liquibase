@@ -1,6 +1,6 @@
 databaseChangeLog:
 -  changeSet:
-      id:  insert-values-5
+      id:  insert-values-9
       author: diego
       comments: Insertar un nuevo cliente
       context: "producción"
@@ -11,8 +11,7 @@ databaseChangeLog:
             endDelimiter: \nGO
             splitStatements:  true
             sql:  INSERT INTO cliente (id, nombre, apellido, email)
-              VALUES (5, 'Lionel', 'Messi', 'lionel@gmail.com')
+              VALUES (9, 'Paolo', 'Guerrero', 'paolo@gmail.com')
             stripComments:  true
       rollback:
-        - sql: DELETE FROM cliente WHERE id = 5
-    
+        - sql: DELETE FROM cliente WHERE id = 9

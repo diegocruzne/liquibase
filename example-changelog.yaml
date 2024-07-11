@@ -1,0 +1,24 @@
+databaseChangeLog:
+- changeSet:
+    id: 1720547970590-1
+    author: diego (generated)
+    changes:
+    - dropTable:
+        tableName: CLIENTE
+
+databaseChangeLog:
+- changeSet:
+    id: 1720557439471-1
+    author: diego (generated)
+    changes:
+    - dropTable:
+        tableName: CLIENTE
+
+databaseChangeLog:
+- changeSet:
+    id: 1720640451656-1
+    author: diego (generated)
+    changes:
+    - dropTable:
+        tableName: CLIENTE
+

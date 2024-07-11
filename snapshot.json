@@ -1,0 +1,147 @@
+Database snapshot for jdbc:oracle:thin:@oracle-db.cdo8ebvqfs7g.us-east-1.rds.amazonaws.com:1521:ORCL
+-----------------------------------------------------------------
+Database type: Oracle
+Database version: Oracle Database 19c Standard Edition 2 Release 19.0.0.0.0 - Production
+Version 19.23.0.0.0
+Database user: ADMIN
+Included types:
+    liquibase.structure.core.Catalog
+    liquibase.structure.core.Column
+    liquibase.structure.core.ForeignKey
+    liquibase.structure.core.Index
+    liquibase.structure.core.PrimaryKey
+    liquibase.structure.core.Schema
+    liquibase.structure.core.Sequence
+    liquibase.structure.core.Table
+    liquibase.structure.core.UniqueConstraint
+    liquibase.structure.core.View
+
+Catalog: ADMIN
+    liquibase.structure.core.Index:
+        PK_DATABASECHANGELOGLOCK
+            columns: 
+                ID
+            table: DATABASECHANGELOGLOCK
+            unique: true
+        
+    liquibase.structure.core.PrimaryKey:
+        PK_DATABASECHANGELOGLOCK
+            backingIndex: PK_DATABASECHANGELOGLOCK
+            columns: 
+                ID
+            table: DATABASECHANGELOGLOCK
+            validate: true
+        
+    liquibase.structure.core.Table:
+        CLIENTE
+            columns: 
+                APELLIDO
+                    nullable: true
+                    order: 3
+                    type: VARCHAR(50 BYTE)
+                EMAIL
+                    nullable: true
+                    order: 4
+                    type: VARCHAR(50 BYTE)
+                ID
+                    nullable: true
+                    order: 1
+                    type: NUMBER(10, 0)
+                NOMBRE
+                    nullable: true
+                    order: 2
+                    type: VARCHAR(50 BYTE)
+            default_tablespace: true
+            tablespace: USERS
+        DATABASECHANGELOG
+            columns: 
+                AUTHOR
+                    nullable: false
+                    order: 2
+                    type: VARCHAR(255 BYTE)
+                COMMENTS
+                    nullable: true
+                    order: 9
+                    type: VARCHAR(255 BYTE)
+                CONTEXTS
+                    nullable: true
+                    order: 12
+                    type: VARCHAR(255 BYTE)
+                DATEEXECUTED
+                    nullable: false
+                    order: 4
+                    type: TIMESTAMP(6)(11)
+                DEPLOYMENT_ID
+                    nullable: true
+                    order: 14
+                    type: VARCHAR(10 BYTE)
+                DESCRIPTION
+                    nullable: true
+                    order: 8
+                    type: VARCHAR(255 BYTE)
+                EXECTYPE
+                    nullable: false
+                    order: 6
+                    type: VARCHAR(10 BYTE)
+                FILENAME
+                    nullable: false
+                    order: 3
+                    type: VARCHAR(255 BYTE)
+                ID
+                    nullable: false
+                    order: 1
+                    type: VARCHAR(255 BYTE)
+                LABELS
+                    nullable: true
+                    order: 13
+                    type: VARCHAR(255 BYTE)
+                LIQUIBASE
+                    nullable: true
+                    order: 11
+                    type: VARCHAR(20 BYTE)
+                MD5SUM
+                    nullable: true
+                    order: 7
+                    type: VARCHAR(35 BYTE)
+                ORDEREXECUTED
+                    nullable: false
+                    order: 5
+                    type: NUMBER(*, 0)
+                TAG
+                    nullable: true
+                    order: 10
+                    type: VARCHAR(255 BYTE)
+            default_tablespace: true
+            tablespace: USERS
+        DATABASECHANGELOGLOCK
+            columns: 
+                ID
+                    nullable: false
+                    order: 1
+                    type: NUMBER(*, 0)
+                LOCKED
+                    nullable: false
+                    order: 2
+                    type: NUMBER(1, 0)
+                LOCKEDBY
+                    nullable: true
+                    order: 4
+                    type: VARCHAR(255 BYTE)
+                LOCKGRANTED
+                    nullable: true
+                    order: 3
+                    type: TIMESTAMP(6)(11)
+            default_tablespace: true
+            indexes: 
+                PK_DATABASECHANGELOGLOCK
+                    columns: 
+                        ID
+                    unique: true
+            primaryKey: PK_DATABASECHANGELOGLOCK
+                backingIndex: PK_DATABASECHANGELOGLOCK
+                columns: 
+                    ID
+                validate: true
+            tablespace: USERS
+        
+    

@@ -1,0 +1,562 @@
+[2024-07-05 12:46:24] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 12:46:24 (version 4.28.0 #2272 built at 2024-05-16 19:00+0000)
+[2024-07-05 12:46:24] INFO [liquibase.ui] Liquibase Version: 4.28.0
+[2024-07-05 12:46:24] INFO [liquibase.ui] Liquibase Open Source 4.28.0 by Liquibase
+[2024-07-05 12:46:24] INFO [liquibase.integration] Starting command execution.
+[2024-07-05 12:46:25] WARNING [liquibase.command] Ignoring the global liquibase.driver value in favor of the command value.
+[2024-07-05 12:46:27] INFO [liquibase.command] Logging exception.
+[2024-07-05 12:46:27] INFO [liquibase.ui] ERROR: Exception Details
+[2024-07-05 12:46:27] INFO [liquibase.ui] ERROR: Exception Primary Class:  ChangeLogParseException
+[2024-07-05 12:46:27] INFO [liquibase.ui] ERROR: Exception Primary Reason:  The file changelogs/addUsers5yaml was not found in the configured search path:
+    - D:\aws\liquibase
+    - C:\Program Files\liquibase-4.28.0\internal\lib\liquibase-core.jar
+    - C:\Program Files\liquibase-4.28.0\lib
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-collections4.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-io.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-lang3.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-text.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\h2.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\hsqldb.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-api.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-core.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-runtime.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaybird.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jcc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\liquibase-commercial.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\mariadb-java-client.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\mssql-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\ojdbc8.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\opencsv.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\picocli.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\postgresql.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\snakeyaml.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\snowflake-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\sqlite-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib
+More locations can be added with the 'searchPath' parameter.
+[2024-07-05 12:46:27] INFO [liquibase.ui] ERROR: Exception Primary Source:  4.28.0
+[2024-07-05 12:46:27] INFO [liquibase.command] Command execution complete
+[2024-07-05 12:46:27] SEVERE [liquibase.integration] The file changelogs/addUsers5yaml was not found in the configured search path:
+    - D:\aws\liquibase
+    - C:\Program Files\liquibase-4.28.0\internal\lib\liquibase-core.jar
+    - C:\Program Files\liquibase-4.28.0\lib
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-collections4.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-io.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-lang3.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-text.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\h2.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\hsqldb.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-api.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-core.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-runtime.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaybird.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jcc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\liquibase-commercial.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\mariadb-java-client.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\mssql-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\ojdbc8.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\opencsv.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\picocli.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\postgresql.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\snakeyaml.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\snowflake-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\sqlite-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib
+More locations can be added with the 'searchPath' parameter.
+liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file changelogs/addUsers5yaml was not found in the configured search path:
+    - D:\aws\liquibase
+    - C:\Program Files\liquibase-4.28.0\internal\lib\liquibase-core.jar
+    - C:\Program Files\liquibase-4.28.0\lib
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-collections4.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-io.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-lang3.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-text.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\h2.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\hsqldb.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-api.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-core.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-runtime.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaybird.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jcc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\liquibase-commercial.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\mariadb-java-client.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\mssql-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\ojdbc8.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\opencsv.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\picocli.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\postgresql.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\snakeyaml.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\snowflake-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\sqlite-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.command.CommandScope.execute(CommandScope.java:257)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:51)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:21)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2041)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2461)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2453)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2415)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2273)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2417)
+	at picocli.CommandLine.execute(CommandLine.java:2170)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:387)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:176)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:362)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:176)
+	at liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:359)
+	at liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:96)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:116)
+Caused by: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file changelogs/addUsers5yaml was not found in the configured search path:
+    - D:\aws\liquibase
+    - C:\Program Files\liquibase-4.28.0\internal\lib\liquibase-core.jar
+    - C:\Program Files\liquibase-4.28.0\lib
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-collections4.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-io.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-lang3.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-text.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\h2.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\hsqldb.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-api.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-core.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-runtime.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaybird.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jcc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\liquibase-commercial.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\mariadb-java-client.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\mssql-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\ojdbc8.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\opencsv.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\picocli.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\postgresql.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\snakeyaml.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\snowflake-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\sqlite-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:25)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.lambda$getDatabaseChangeLog$0(DatabaseChangelogCommandStep.java:129)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:176)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.getDatabaseChangeLog(DatabaseChangelogCommandStep.java:128)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:87)
+	at liquibase.command.CommandScope.execute(CommandScope.java:219)
+	... 21 more
+Caused by: liquibase.exception.SetupException: The file changelogs/addUsers5yaml was not found in the configured search path:
+    - D:\aws\liquibase
+    - C:\Program Files\liquibase-4.28.0\internal\lib\liquibase-core.jar
+    - C:\Program Files\liquibase-4.28.0\lib
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-collections4.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-io.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-lang3.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-text.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\h2.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\hsqldb.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-api.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-core.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-runtime.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaybird.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jcc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\liquibase-commercial.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\mariadb-java-client.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\mssql-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\ojdbc8.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\opencsv.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\picocli.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\postgresql.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\snakeyaml.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\snowflake-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\sqlite-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.changelog.DatabaseChangeLog.handleChildNodeHelper(DatabaseChangeLog.java:501)
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:453)
+	at liquibase.changelog.DatabaseChangeLog.load(DatabaseChangeLog.java:421)
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:23)
+	... 27 more
+Caused by: liquibase.exception.LiquibaseException: The file changelogs/addUsers5yaml was not found in the configured search path:
+    - D:\aws\liquibase
+    - C:\Program Files\liquibase-4.28.0\internal\lib\liquibase-core.jar
+    - C:\Program Files\liquibase-4.28.0\lib
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-collections4.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-io.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-lang3.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-text.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\h2.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\hsqldb.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-api.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-core.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-runtime.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaybird.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jcc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\liquibase-commercial.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\mariadb-java-client.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\mssql-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\ojdbc8.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\opencsv.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\picocli.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\postgresql.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\snakeyaml.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\snowflake-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\sqlite-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:1030)
+	at liquibase.changelog.DatabaseChangeLog.handleChildNodeHelper(DatabaseChangeLog.java:491)
+	... 30 more
+Caused by: liquibase.exception.ChangeLogParseException: The file changelogs/addUsers5yaml was not found in the configured search path:
+    - D:\aws\liquibase
+    - C:\Program Files\liquibase-4.28.0\internal\lib\liquibase-core.jar
+    - C:\Program Files\liquibase-4.28.0\lib
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-collections4.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-io.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-lang3.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\commons-text.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\h2.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\hsqldb.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-api.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-core.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaxb-runtime.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jaybird.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\jcc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\liquibase-commercial.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\mariadb-java-client.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\mssql-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\ojdbc8.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\opencsv.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\picocli.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\postgresql.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\snakeyaml.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\snowflake-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib\sqlite-jdbc.jar
+    - C:\Program Files\liquibase-4.28.0\internal\lib
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:992)
+	... 31 more
+
+[2024-07-05 12:46:27] INFO [liquibase.ui] Logs saved to log.txt
+[2024-07-05 12:46:46] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 12:46:46 (version 4.28.0 #2272 built at 2024-05-16 19:00+0000)
+[2024-07-05 12:46:46] INFO [liquibase.ui] Liquibase Version: 4.28.0
+[2024-07-05 12:46:46] INFO [liquibase.ui] Liquibase Open Source 4.28.0 by Liquibase
+[2024-07-05 12:46:46] INFO [liquibase.integration] Starting command execution.
+[2024-07-05 12:46:46] WARNING [liquibase.command] Ignoring the global liquibase.driver value in favor of the command value.
+[2024-07-05 12:46:50] INFO [liquibase.changelog] Reading from ADMIN.DATABASECHANGELOG
+[2024-07-05 12:46:51] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2024-07-05 12:46:51] INFO [liquibase.changelog] Reading from ADMIN.DATABASECHANGELOG
+[2024-07-05 12:46:52] INFO [liquibase.ui] Rolling Back Changeset: changelogs/addusers5.yaml::insert-values-5::diego
+[2024-07-05 12:46:52] INFO [liquibase.command] Rollback command completed successfully.
+[2024-07-05 12:46:52] INFO [liquibase.lockservice] Successfully released change log lock
+[2024-07-05 12:46:53] INFO [liquibase.command] Command execution complete
+[2024-07-05 12:46:53] INFO [liquibase.ui] Logs saved to log.txt
+[2024-07-05 12:46:53] INFO [liquibase.ui] Liquibase command 'rollbackCount' was executed successfully.
+[2024-07-05 12:50:58] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 12:50:58 (version 4.28.0 #2272 built at 2024-05-16 19:00+0000)
+[2024-07-05 12:50:58] INFO [liquibase.ui] Liquibase Version: 4.28.0
+[2024-07-05 12:50:58] INFO [liquibase.ui] Liquibase Open Source 4.28.0 by Liquibase
+[2024-07-05 12:50:58] INFO [liquibase.integration] Starting command execution.
+[2024-07-05 12:50:58] WARNING [liquibase.command] Ignoring the global liquibase.driver value in favor of the command value.
+[2024-07-05 12:51:03] INFO [liquibase.changelog] Reading from ADMIN.DATABASECHANGELOG
+[2024-07-05 12:51:04] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2024-07-05 12:51:04] INFO [liquibase.changelog] Reading from ADMIN.DATABASECHANGELOG
+[2024-07-05 12:51:04] INFO [liquibase.ui] INFO: 0 changesets rolled back.
+[2024-07-05 12:51:04] INFO [liquibase.command] Rollback command completed successfully.
+[2024-07-05 12:51:05] INFO [liquibase.lockservice] Successfully released change log lock
+[2024-07-05 12:51:05] INFO [liquibase.command] Command execution complete
+[2024-07-05 12:51:05] INFO [liquibase.ui] Logs saved to log.txt
+[2024-07-05 12:51:05] INFO [liquibase.ui] Liquibase command 'rollbackCount' was executed successfully.
+[2024-07-05 12:51:18] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 12:51:18 (version 4.28.0 #2272 built at 2024-05-16 19:00+0000)
+[2024-07-05 12:51:18] INFO [liquibase.ui] Liquibase Version: 4.28.0
+[2024-07-05 12:51:18] INFO [liquibase.ui] Liquibase Open Source 4.28.0 by Liquibase
+[2024-07-05 12:51:18] INFO [liquibase.integration] Starting command execution.
+[2024-07-05 12:51:18] WARNING [liquibase.command] Ignoring the global liquibase.driver value in favor of the command value.
+[2024-07-05 12:51:23] INFO [liquibase.changelog] Reading from ADMIN.DATABASECHANGELOG
+[2024-07-05 12:51:24] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2024-07-05 12:51:24] INFO [liquibase.changelog] Reading from ADMIN.DATABASECHANGELOG
+[2024-07-05 12:51:24] INFO [liquibase.ui] INFO: 0 changesets rolled back.
+[2024-07-05 12:51:24] INFO [liquibase.command] Rollback command completed successfully.
+[2024-07-05 12:51:25] INFO [liquibase.lockservice] Successfully released change log lock
+[2024-07-05 12:51:25] INFO [liquibase.command] Command execution complete
+[2024-07-05 12:51:25] INFO [liquibase.ui] Logs saved to log.txt
+[2024-07-05 12:51:25] INFO [liquibase.ui] Liquibase command 'rollbackCount' was executed successfully.
+[2024-07-05 12:52:41] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 12:52:41 (version 4.28.0 #2272 built at 2024-05-16 19:00+0000)
+[2024-07-05 12:52:41] INFO [liquibase.ui] Liquibase Version: 4.28.0
+[2024-07-05 12:52:41] INFO [liquibase.ui] Liquibase Open Source 4.28.0 by Liquibase
+[2024-07-05 12:52:41] INFO [liquibase.integration] Starting command execution.
+[2024-07-05 12:52:41] WARNING [liquibase.command] Ignoring the global liquibase.driver value in favor of the command value.
+[2024-07-05 12:52:45] INFO [liquibase.changelog] Reading from ADMIN.DATABASECHANGELOG
+[2024-07-05 12:52:47] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2024-07-05 12:52:47] INFO [liquibase.command] Using deploymentId: 0201967237
+[2024-07-05 12:52:47] INFO [liquibase.changelog] Reading from ADMIN.DATABASECHANGELOG
+[2024-07-05 12:52:47] INFO [liquibase.ui] Running Changeset: changelogs/addUsers5.yaml::insert-values-5::diego
+[2024-07-05 12:52:47] INFO [liquibase.changelog] Custom SQL executed
+[2024-07-05 12:52:47] INFO [liquibase.changelog] ChangeSet changelogs/addUsers5.yaml::insert-values-5::diego ran successfully in 312ms
+[2024-07-05 12:52:48] INFO [liquibase.ui] Running Changeset: changelogs/addUsers6.yaml::insert-values-6::diego
+[2024-07-05 12:52:48] INFO [liquibase.changelog] Custom SQL executed
+[2024-07-05 12:52:48] INFO [liquibase.changelog] ChangeSet changelogs/addUsers6.yaml::insert-values-6::diego ran successfully in 311ms
+[2024-07-05 12:52:49] INFO [liquibase.util] UPDATE SUMMARY
+[2024-07-05 12:52:49] INFO [liquibase.util] Run:                          2
+[2024-07-05 12:52:49] INFO [liquibase.util] Previously run:               0
+[2024-07-05 12:52:49] INFO [liquibase.util] Filtered out:                 0
+[2024-07-05 12:52:49] INFO [liquibase.util] -------------------------------
+[2024-07-05 12:52:49] INFO [liquibase.util] Total change sets:            2
+[2024-07-05 12:52:49] INFO [liquibase.util] Update summary generated
+[2024-07-05 12:52:49] INFO [liquibase.command] Update command completed successfully.
+[2024-07-05 12:52:49] INFO [liquibase.ui] Liquibase: Update has been successful. Rows affected: 4
+[2024-07-05 12:52:49] INFO [liquibase.lockservice] Successfully released change log lock
+[2024-07-05 12:52:49] INFO [liquibase.command] Command execution complete
+[2024-07-05 12:52:49] INFO [liquibase.ui] Logs saved to log.txt
+[2024-07-05 12:52:49] INFO [liquibase.ui] Liquibase command 'update' was executed successfully.
+[2024-07-05 12:57:01] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 12:57:01 (version 4.28.0 #2272 built at 2024-05-16 19:00+0000)
+[2024-07-05 12:57:01] INFO [liquibase.ui] Liquibase Version: 4.28.0
+[2024-07-05 12:57:01] INFO [liquibase.ui] Liquibase Open Source 4.28.0 by Liquibase
+[2024-07-05 12:57:01] INFO [liquibase.integration] Starting command execution.
+[2024-07-05 12:57:01] WARNING [liquibase.command] Ignoring the global liquibase.driver value in favor of the command value.
+[2024-07-05 12:57:06] INFO [liquibase.changelog] Reading from ADMIN.DATABASECHANGELOG
+[2024-07-05 12:57:07] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2024-07-05 12:57:07] INFO [liquibase.changelog] Reading from ADMIN.DATABASECHANGELOG
+[2024-07-05 12:57:07] INFO [liquibase.ui] Rolling Back Changeset: changelogs/addUsers6.yaml::insert-values-6::diego
+[2024-07-05 12:57:08] INFO [liquibase.ui] Rolling Back Changeset: changelogs/addUsers5.yaml::insert-values-5::diego
+[2024-07-05 12:57:08] INFO [liquibase.command] Rollback command completed successfully.
+[2024-07-05 12:57:09] INFO [liquibase.lockservice] Successfully released change log lock
+[2024-07-05 12:57:09] INFO [liquibase.command] Command execution complete
+[2024-07-05 12:57:09] INFO [liquibase.ui] Logs saved to log.txt
+[2024-07-05 12:57:09] INFO [liquibase.ui] Liquibase command 'rollbackCount' was executed successfully.
+[2024-07-05 13:00:51] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 13:00:51 (version 4.28.0 #2272 built at 2024-05-16 19:00+0000)
+[2024-07-05 13:00:51] INFO [liquibase.ui] Liquibase Version: 4.28.0
+[2024-07-05 13:00:51] INFO [liquibase.ui] Liquibase Open Source 4.28.0 by Liquibase
+[2024-07-05 13:00:51] INFO [liquibase.integration] Starting command execution.
+[2024-07-05 13:00:51] WARNING [liquibase.command] Ignoring the global liquibase.driver value in favor of the command value.
+[2024-07-05 13:00:56] INFO [liquibase.changelog] Reading from ADMIN.DATABASECHANGELOG
+[2024-07-05 13:00:57] INFO [liquibase.command] Command execution complete
+[2024-07-05 13:00:57] INFO [liquibase.ui] Logs saved to log.txt
+[2024-07-05 13:00:57] INFO [liquibase.ui] Liquibase command 'status' was executed successfully.
+[2024-07-05 13:03:01] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 13:03:01 (version 4.28.0 #2272 built at 2024-05-16 19:00+0000)
+[2024-07-05 13:03:01] INFO [liquibase.ui] Liquibase Version: 4.28.0
+[2024-07-05 13:03:01] INFO [liquibase.ui] Liquibase Open Source 4.28.0 by Liquibase
+[2024-07-05 13:03:01] INFO [liquibase.integration] Starting command execution.
+[2024-07-05 13:03:01] WARNING [liquibase.command] Ignoring the global liquibase.driver value in favor of the command value.
+[2024-07-05 13:03:06] INFO [liquibase.changelog] Reading from ADMIN.DATABASECHANGELOG
+[2024-07-05 13:03:06] INFO [liquibase.command] Command execution complete
+[2024-07-05 13:03:06] INFO [liquibase.ui] Logs saved to log.txt
+[2024-07-05 13:03:06] INFO [liquibase.ui] Liquibase command 'status' was executed successfully.
+[2024-07-05 13:03:25] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 13:03:25 (version 4.28.0 #2272 built at 2024-05-16 19:00+0000)
+[2024-07-05 13:03:25] INFO [liquibase.ui] Liquibase Version: 4.28.0
+[2024-07-05 13:03:25] INFO [liquibase.ui] Liquibase Open Source 4.28.0 by Liquibase
+[2024-07-05 13:03:25] INFO [liquibase.integration] Starting command execution.
+[2024-07-05 13:03:27] WARNING [liquibase.configuration] Potentially ignored key(s) in file exists at path liquibase.properties
+ - 'changeLogFile'
+ - 'password'
+ - 'url'
+ - 'username'
+[2024-07-05 13:03:27] INFO [liquibase.changelog] Reading from ADMIN.DATABASECHANGELOG
+[2024-07-05 13:03:27] INFO [liquibase.command] Command execution complete
+[2024-07-05 13:03:27] INFO [liquibase.command] Command execution complete
+[2024-07-05 13:03:27] INFO [liquibase.ui] Logs saved to log.txt
+[2024-07-05 13:03:27] INFO [liquibase.ui] Liquibase command 'history' was executed successfully.
+[2024-07-05 13:05:49] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 13:05:49 (version 4.28.0 #2272 built at 2024-05-16 19:00+0000)
+[2024-07-05 13:05:49] INFO [liquibase.ui] Liquibase Version: 4.28.0
+[2024-07-05 13:05:49] INFO [liquibase.ui] Liquibase Open Source 4.28.0 by Liquibase
+[2024-07-05 13:05:49] INFO [liquibase.integration] Starting command execution.
+[2024-07-05 13:05:49] WARNING [liquibase.command] Ignoring the global liquibase.driver value in favor of the command value.
+[2024-07-05 13:05:54] INFO [liquibase.changelog] Reading from ADMIN.DATABASECHANGELOG
+[2024-07-05 13:05:55] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2024-07-05 13:05:55] INFO [liquibase.changelog] Reading from ADMIN.DATABASECHANGELOG
+[2024-07-05 13:05:55] INFO [liquibase.ui] INFO: 0 changesets rolled back.
+[2024-07-05 13:05:55] INFO [liquibase.command] Rollback command completed successfully.
+[2024-07-05 13:05:55] INFO [liquibase.lockservice] Successfully released change log lock
+[2024-07-05 13:05:56] INFO [liquibase.command] Command execution complete
+[2024-07-05 13:05:56] INFO [liquibase.ui] Logs saved to log.txt
+[2024-07-05 13:05:56] INFO [liquibase.ui] Liquibase command 'rollbackCount' was executed successfully.
+[2024-07-05 13:06:19] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 13:06:19 (version 4.28.0 #2272 built at 2024-05-16 19:00+0000)
+[2024-07-05 13:06:19] INFO [liquibase.ui] Liquibase Version: 4.28.0
+[2024-07-05 13:06:19] INFO [liquibase.ui] Liquibase Open Source 4.28.0 by Liquibase
+[2024-07-05 13:06:19] INFO [liquibase.integration] Starting command execution.
+[2024-07-05 13:06:19] WARNING [liquibase.command] Ignoring the global liquibase.driver value in favor of the command value.
+[2024-07-05 13:06:24] INFO [liquibase.changelog] Reading from ADMIN.DATABASECHANGELOG
+[2024-07-05 13:06:24] INFO [liquibase.command] Command execution complete
+[2024-07-05 13:06:24] INFO [liquibase.ui] Logs saved to log.txt
+[2024-07-05 13:06:24] INFO [liquibase.ui] Liquibase command 'status' was executed successfully.
+[2024-07-05 14:52:56] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 14:52:56 (version 4.28.0 #2272 built at 2024-05-16 19:00+0000)
+[2024-07-05 14:52:56] INFO [liquibase.ui] Liquibase Version: 4.28.0
+[2024-07-05 14:52:56] INFO [liquibase.ui] Liquibase Open Source 4.28.0 by Liquibase
+[2024-07-05 14:52:56] INFO [liquibase.integration] Starting command execution.
+[2024-07-05 14:52:56] WARNING [liquibase.configuration] Potentially ignored key(s) in file exists at path liquibase.properties
+ - 'changeLogFile'
+[2024-07-05 14:52:56] WARNING [liquibase.command] Ignoring the global liquibase.driver value in favor of the command value.
+[2024-07-05 14:52:58] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2024-07-05 14:53:02] INFO [liquibase.ui] Successfully tagged 'ADMIN@jdbc:oracle:thin:@oracle-db.cdo8ebvqfs7g.us-east-1.rds.amazonaws.com:1521:ORCL'
+[2024-07-05 14:53:02] INFO [liquibase.lockservice] Successfully released change log lock
+[2024-07-05 14:53:02] INFO [liquibase.command] Command execution complete
+[2024-07-05 14:53:02] INFO [liquibase.ui] Logs saved to log.txt
+[2024-07-05 14:53:02] INFO [liquibase.ui] Liquibase command 'tag' was executed successfully.

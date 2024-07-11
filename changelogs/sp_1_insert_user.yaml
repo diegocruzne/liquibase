@@ -1,0 +1,25 @@
+databaseChangeLog:
+-  changeSet:
+      id:  sp_1_insert_user
+      author: diego
+      comments: Store procedure para insertar un nuevo cliente
+      context: "producción"
+      labels: "sp_insert_cliente"
+      changes:
+        - sql:
+            dbms: 'oracle'
+            endDelimiter: \nGO
+            splitStatements:  true
+            sql: CREATE OR REPLACE PROCEDURE insert_cliente (
+                p_id IN NUMBER,
+                p_nombre IN VARCHAR2,
+                p_apellido IN VARCHAR2,
+                p_email IN VARCHAR2
+              ) AS
+              BEGIN
+                  INSERT INTO cliente (id, nombre, apellido, email)
+                  VALUES (p_id, p_nombre, p_apellido, p_email);
+              END insert_cliente;
+            stripComments:  true
+      rollback:
+        - sql: DROP PROCEDURE insert_cliente

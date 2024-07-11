@@ -1,15 +1,17 @@
 databaseChangeLog:
 -  changeSet:
-      id:  insert-values-3
-      author:  diego
+      id:  insert-values-8
+      author: diego
+      comments: Insertar un nuevo cliente
+      context: "producción"
+      labels: "cliente_nuevo"
       changes:
         - sql:
             dbms: 'oracle'
             endDelimiter: \nGO
             splitStatements:  true
             sql:  INSERT INTO cliente (id, nombre, apellido, email)
-              VALUES (4, 'Pedrito', 'Me electrocutaste', 'pedrito@gmail.com')
+              VALUES (8, 'Cristiano', 'Ronaldo', 'cristiano@gmail.com')
             stripComments:  true
       rollback:
-        - sql: DELETE FROM cliente WHERE id = 4
-    
+        - sql: DELETE FROM cliente WHERE id = 8

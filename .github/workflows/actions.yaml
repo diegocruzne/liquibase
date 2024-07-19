@@ -30,7 +30,6 @@ jobs:
               with:
                 changelogFile: 'changelog.xml'
                 url: ${{ secrets.LIQUIBASE_URL }}
-               # classpath: '
                 username: ${{ secrets.LIQUIBASE_USERNAME }}
                 password: ${{ secrets.LIQUIBASE_PASSWORD }}
 

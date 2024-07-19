@@ -13,4 +13,6 @@
 <include file="changelogs/addusers6.yaml"/> 
 <include file="changelogs/sp_1_insert_user.yaml"/>
 
+<include file="changelogs/addusers10.yaml"/>
+
 </databaseChangeLog>

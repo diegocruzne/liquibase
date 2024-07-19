@@ -25,8 +25,8 @@ jobs:
               uses: liquibase/liquibase-github-action@v7
               with:
                 operation: 'update'
-                classpath: 'changelog.xml'
-                # changeLogFile: 'samplechangelog.h2.sql'
+                classpath: 'changelogs'
+                changeLogFile: 'adduser3.yaml'
                 username: ${{ secrets.LIQUIBASE_USERNAME }}
                 password: ${{ secrets.LIQUIBASE_PASSWORD }}
                 url: ${{ secrets.LIQUIBASE_URL }}

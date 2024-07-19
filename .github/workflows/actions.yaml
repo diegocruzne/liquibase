@@ -26,14 +26,13 @@ jobs:
               run: pwd
 
             - name: Install Liquibase
-              uses: liquibase/liquibase-github-action@v7
+              uses: liquibase-github-actions/update@v4.28.0
               with:
-                operation: 'update'
+                changelogFile: 'changelogs/adduser3.yaml'
+                url: ${{ secrets.LIQUIBASE_URL }}
                 classpath: 'changelogs'
-                changeLogFile: 'changelogs/adduser3.yaml'
                 username: ${{ secrets.LIQUIBASE_USERNAME }}
                 password: ${{ secrets.LIQUIBASE_PASSWORD }}
-                url: ${{ secrets.LIQUIBASE_URL }}
 
             # - name: Configure variables
             #   env:

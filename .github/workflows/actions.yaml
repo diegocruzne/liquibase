@@ -28,9 +28,9 @@ jobs:
             - name: Install Liquibase
               uses: liquibase-github-actions/update@v4.28.0
               with:
-                changelogFile: 'changelogs/adduser3.yaml'
+                changelogFile: 'changelog.xml'
                 url: ${{ secrets.LIQUIBASE_URL }}
-                classpath: 'changelogs'
+               # classpath: '
                 username: ${{ secrets.LIQUIBASE_USERNAME }}
                 password: ${{ secrets.LIQUIBASE_PASSWORD }}
 

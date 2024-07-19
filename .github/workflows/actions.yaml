@@ -25,7 +25,7 @@ jobs:
             - name: Print working directory
               run: pwd
 
-            - name: Install Liquibase
+            - name: Execute Liquibase
               uses: liquibase-github-actions/update@v4.28.0
               with:
                 changelogFile: 'changelog.xml'

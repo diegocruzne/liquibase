@@ -10,6 +10,8 @@ jobs:
     liquibase-update:
         runs-on: ubuntu-latest
 
+        environment: ${{ github.ref_name }}
+
         steps:
             - uses: actions/checkout@v4
 
@@ -19,12 +21,22 @@ jobs:
                   distribution: 'zulu'
                   java-version: '21'
 
-            - name: Configure variables
-              env:
-                LIQUIBASE_URL: ${{ secrets.LIQUIBASE_URL }}
-                LIQUIBASE_USERNAME: ${{ secrets.LIQUIBASE_USERNAME }}
-                LIQUIBASE_PASSWORD: ${{ secrets.LIQUIBASE_PASSWORD }}
-                LIQUIBASE_CHANGELOG: ${{ secrets.LIQUIBASE_CHANGELOG }}
-                LIQUIBASE_DRIVER: ${{ secrets.LIQUIBASE_DRIVER }}
-              run: |
-                liquibase --url=$LIQUIBASE_URL --username=$LIQUIBASE_USERNAME --password=$LIQUIBASE_PASSWORD --changeLogFile=$LIQUIBASE_CHANGELOG --driver=$LIQUIBASE_DRIVER update
+            - name: Install Liquibase
+              uses: liquibase/liquibase-github-action@v7
+              with:
+                operation: 'update'
+                classpath: 'changelog.xml'
+                # changeLogFile: 'samplechangelog.h2.sql'
+                username: ${{ secrets.LIQUIBASE_USERNAME }}
+                password: ${{ secrets.LIQUIBASE_PASSWORD }}
+                url: ${{ secrets.LIQUIBASE_URL }}
+
+            # - name: Configure variables
+            #   env:
+            #     LIQUIBASE_URL: ${{ secrets.LIQUIBASE_URL }}
+            #     LIQUIBASE_USERNAME: ${{ secrets.LIQUIBASE_USERNAME }}
+            #     LIQUIBASE_PASSWORD: ${{ secrets.LIQUIBASE_PASSWORD }}
+            #     LIQUIBASE_CHANGELOG: ${{ secrets.LIQUIBASE_CHANGELOG }}
+            #     LIQUIBASE_DRIVER: ${{ secrets.LIQUIBASE_DRIVER }}
+            #   run: |
+            #     liquibase --url=$LIQUIBASE_URL --username=$LIQUIBASE_USERNAME --password=$LIQUIBASE_PASSWORD --changeLogFile=$LIQUIBASE_CHANGELOG --driver=$LIQUIBASE_DRIVER update

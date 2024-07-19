@@ -21,6 +21,10 @@ jobs:
             #       distribution: 'zulu'
             #       java-version: '11'
 
+            # pwd
+            - name: Print working directory
+              run: pwd
+
             - name: Install Liquibase
               uses: liquibase/liquibase-github-action@v7
               with:

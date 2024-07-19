@@ -26,7 +26,7 @@ jobs:
               with:
                 operation: 'update'
                 classpath: 'changelogs'
-                changeLogFile: 'adduser3.yaml'
+                changeLogFile: 'changelogs/adduser3.yaml'
                 username: ${{ secrets.LIQUIBASE_USERNAME }}
                 password: ${{ secrets.LIQUIBASE_PASSWORD }}
                 url: ${{ secrets.LIQUIBASE_URL }}
